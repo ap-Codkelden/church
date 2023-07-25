@@ -1,0 +1,11 @@
+#commandments {
+	list-style-type: upper-roman;
+}
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+#container {
+	margin: 2ex 4ex;
+}
