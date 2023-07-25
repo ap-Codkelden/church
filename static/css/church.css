@@ -7,5 +7,27 @@ h1, h2, h3 {
 }
 
 #container {
-	margin: 2ex 4ex;
+	margin-block: 2rem;
+}
+
+.accordion {
+	counter-reset: section;
+}
+
+.accordion-item {
+	counter-increment: section;
+	counter-reset: item;
+}
+
+.accordion-button::before {
+	content: counter(section) '.\00A0';
+}
+
+.accordion-body ol {
+	list-style: none;
+}
+
+.accordion-body ol li::before {
+	counter-increment: item;
+	content: counter(section) '.' counter(item) '.\00A0';
 }
