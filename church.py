@@ -17,3 +17,8 @@ def hello_world():
 @app.route("/faq")
 def faq():
     return render_template('faq.html')
+
+
+@app.route("/commandments")
+def commandments():
+    return render_template('commandments.html')
