@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block title %}Церква Св. Інвайту{% endblock %}
+
+
+{% block styles %}
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/church.css')}}">
+{% endblock %}
+
+{% block og %}
+	<meta property="og:title" content="St. Invite Church &#x1F7E1;&#x1F4D8;" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://bsky.church/" />
+	<!-- <meta property="og:image" content="TBD" /> -->
+	<meta property="og:description" 
+		content="Obey the commandments." />
+{% endblock %}
+
+{% block content %}
+<div id="container">
+<h2 class="text-center">Заповіді &#x1F4D8;</h2>
+<ol id="commandments">
+	<li>Нехай не буде в тебе іншого мікроблогу в пріоритеті.</li>
+	<li>Розширюй український кластер.</li>
+	<li>Шитпость заради святих інвайтів.</li>
+	<li>Ділись інвайтом з ближнім своїм, і відмов русні та іншим нечестивим.</li>
+	<li>Шануй Укртвізалізницю та інші акаунти спільноти.</li>
+	<li>Донать на Сили безпеки й оборони України.</li>
+	<li>Репорть і блокуй нечестивих.</li>
+	<li>Не допускай зайвого гейту в суперечках.</li>
+	<li>Фолов ближнього свого.</li>
+	<li>Шануй священне інвайт-дерево Інвайтдрасиль і гілки інвайтів своїх, бо відповідаєш ти за тих, кого сюди запросив, а вони&nbsp;&mdash; за тебе.</li>
+</ol>
+</div>
+  <div class="text-center" style="margin-top:15ex;">
+    {% include "back.html" %}
+  </div>
+{% endblock %}

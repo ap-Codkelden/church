@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block og %}
-	<meta property="og:title" content="BlueSky FAQ" />
+	<meta property="og:title" content="Bluesky FAQ" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://bsky.church/faq" />
 	<meta property="og:description"
@@ -17,7 +17,10 @@
 
 {% block content %}
 <div id="container" class="container">
-  <h2 class="mb-5">Ви тут. Що далі?</h2>
+  <h3 class="mb-5">Ви тут. Що далі?</h3>
+
+  <h5 class="text-center">&copy;&nbsp;<a href="https://bsky.app/profile/rikk-tikki-tav.bsky.social">рікі тікі таві</a> та Церква<br/>
+    v 1.0, липень 2023</h5>
 
   <div class="accordion accordion-flush" id="accordionFAQ">
     <div class="accordion-item">
@@ -28,7 +31,7 @@
       </h2>
       <div id="collapseAbsent" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
         <div class="accordion-body">
-          <p><strong>Мережа BlueSky&nbsp;&mdash; на стадії бета-тесту</strong>, а отже багато з того, що ви звикли бачити в інших
+          <p><strong>Мережа Bluesky&nbsp;&mdash; на стадії бета-тесту</strong>, а отже багато з того, що ви звикли бачити в інших
           соцмережах, зокрема у Twitter тут поки що відсутнє, і коли буде&nbsp;&mdash; невідомо.</p>
 
           <ol>
@@ -399,7 +402,6 @@
           <ol>
             <li>Технічно просунуті користувачі можуть зробити handle <a href="https://blueskyweb.xyz/blog/4-28-2023-domain-handle-tutorial">на власному домені</a></li>
             <li>Також можна скористатися <a href="https://blueskyweb.xyz/blog/7-05-2023-namecheap">платною функцією</a> простого підключення кастомних доменів</li>
-            </li>
           </ol>
         </div>
       </div>
@@ -462,4 +464,7 @@
     </div>
   </div>
 </div>
+  <div class="text-center" style="margin-top:15ex;margin-bottom:5ex;">
+    {% include "back.html" %} | <a href="#container">Нагору</a>
+  </div>
 {% endblock %}

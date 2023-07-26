@@ -1,13 +1,27 @@
 #commandments {
 	list-style-type: upper-roman;
+	margin-left: 15em;
+	margin-top: 4ex;
 }
 
 h1, h2, h3 {
 	text-align: center;
 }
 
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 6em;
+	padding: 20px 5vw 0;
+}
+
 #container {
 	margin-block: 2rem;
+}
+
+#greetings {
+	margin-bottom: 4rem;
 }
 
 .accordion {
