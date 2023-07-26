@@ -16,197 +16,493 @@
 {% endblock %}
 
 {% block content %}
-<div id="container">
-<h2>Ви тут. Що далі?</h2>
-<ul>
-    <li>Що таке фід?
-    <p>Фід – стрічка, таймлайн постів. Зазвичай, коли ви з'явились в Блакитному, у вас є Following, What's Hot,
-        What's Hot Classic. Між ними можна перемикатися свайпами вправо-вліво.</p>
-    <ol>
-        <li>На головному екрані з фідами в правому верхньому кутку є коліщатко – там можна налаштувати фіди:
-            закріпити або відкріпити, видалити, знайти нові та додати їх собі.</li>
-        <li>Фіди можна робити власні. Більшість українських можна знайти у @bsky.one.
-            Також фіди можна лайкати, а в налаштуваннях побачити топ фідів по лайкам, тому не
-            забувайте лайкати українські фіди, щоб вони виводились в топ для всіх, в тому
-            числі іноземців. За прогресом слідкує @wolfigelkott.crimea.ua</li>
-        <li>Детальніше про створення власних фідів можна прочитати на skyfeed.app</li>
-    </ol>
-    </li>
-    <li>Що таке списки?
-    <p>Списки або lists – це список з акаунтів, які ви хочете замутити (тобто щоб вони не висвітлювались у
-        стрічках і ви не бачили їхніх взаємодій).</p>
-    <ol>
-        <li>Створити список може кожен, а також ви можете підписатися на існуючі списки інших користувачів,
-            таким чином
-            однією кнопкою зам'ютивши всіх, хто є в списку.</li>
+<div id="container" class="container">
+  <h2 class="mb-5">Ви тут. Що далі?</h2>
+
+  <div class="accordion accordion-flush" id="accordionFAQ">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Що таке фід?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Фід – стрічка, таймлайн постів. Зазвичай, коли ви з'явились в Блакитному, у вас є Following, What's Hot,
+            What's Hot Classic. Між ними можна перемикатися свайпами вправо-вліво.</p>
+
+          <ol>
+            <li>На головному екрані з фідами в правому верхньому кутку є коліщатко – там можна налаштувати фіди:
+              закріпити або відкріпити, видалити, знайти нові та додати їх собі.</li>
+            <li>Фіди можна робити власні. Більшість українських можна знайти у @bsky.one.
+              Також фіди можна лайкати, а в налаштуваннях побачити топ фідів по лайкам, тому не
+              забувайте лайкати українські фіди, щоб вони виводились в топ для всіх, в тому
+              числі іноземців. За прогресом слідкує @wolfigelkott.crimea.ua</li>
+            <li>Детальніше про створення власних фідів можна прочитати на skyfeed.app</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Що таке списки?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Списки або lists – це список з акаунтів, які ви хочете замутити (тобто щоб вони не висвітлювались у
+            стрічках і ви не бачили їхніх взаємодій).</p>
+
+          <ol>
+            <li>Створити список може кожен, а також ви можете підписатися на існуючі списки інших користувачів,
+              таким чином
+              однією кнопкою зам'ютивши всіх, хто є в списку.</li>
             <li>Бан-листи поки не підвезли, але ви можете пройтись по існуючим спискам та забанити кожного
-                звідти вручну.</li>
+              звідти вручну.</li>
             <li>Створити власний список можна через Moderation - Mute lists - значок плюс у правому
-                верхньому куті. Знайти списки інших можна перейшовши на їхній профіль: графа lists буде
-                йти після posts, posts&replies. Основні списки можна побачити у @mods.uabluerail.org.</li>
-    </ol>
-    </li>
-    <li>Що таке Атлас?
-    <p>Атлас – це візуалізація усіх активних користувачів Блакитного, їхньої активності та взаємодій.
-        Атлас створений <a href="https://bsky.app/profile/jaz.bsky.social">@jaz.bsky.social</a> і оновлюється вручну кожні кілька днів (раніше приблизно кожен тиждень,
-        востаннє – через 11 днів?</p>
-    <ol>
-        <li>Кластери на Атласі відображають згруповання користувачів за певною ознакою – так, наприклад, на Атласі вже є український кластер, який ми плекаємо.
-        <li>Жовті кульки – це українські користувачі на Атласі, їхній розмір може змінюватися залежно
-        від активності. Наші жовті кульки ми теж плекаємо.</li>
-        <li>Кожен кластер має свій колір, проте трапляються схожі. Так, жовтий колір також належить кластеру Web3, але жовтий українського кластеру насиченіший і яскравіший, а жовтий Web3 – тьмяніший. Побачити різницю можна
-            <a href="https://bsky.jazco.dev/">на Атласі</a></li>
-        <li>Якщо вас немає на Атласі, чекайте оновлення.</li>
-    </ol>
-    </li>
+              верхньому куті. Знайти списки інших можна перейшовши на їхній профіль: графа lists буде
+              йти після posts, posts&replies. Основні списки можна побачити у @mods.uabluerail.org.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
 
-    <li>Що таке Укртвізалізниця?
-    <p>Це об'єднання зусиль команди людей, українців, щоб перевезти сюди з твітера якомога більше людей. Заснована
-        <a href="https://bsky.app/profile/mathan.dev">@mathan.dev</a>.</p>
-    </li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Що таке Атлас?
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Атлас – це візуалізація усіх активних користувачів Блакитного, їхньої активності та взаємодій.
+            Атлас створений <a href="https://bsky.app/profile/jaz.bsky.social">@jaz.bsky.social</a> і оновлюється вручну кожні кілька днів (раніше приблизно кожен тиждень,
+            востаннє – через 11 днів?</p>
 
-    <li>Що таке церква?
-    <p>Церква – це наша спроба у розважальний спосіб описати принципи того, як працює Блакитне з нашого досвіду.
-        Детальніше можна почитати у <a href="https://bsky.app/profile/bsky.church">@bsky.church</a>.
-        Також у церкви <a href="https://bsky.app/profile/did:plc:dvgliotey33vix3wlltybgkd/feed/bluebook">є свій фід</a>,
-        і <a href="https://bsky.church/">свій сайт</a></p>
-    <ol>
-    <li>Свиня, лисиця, змія та інший зоопарк&nbsp;&mdash;це розважальний спосіб, а українці,
-        очевидно, дуже люблять тварин :) Тому вони стали персонажами міфології церкви і приносять інвайти.
-        Ви можете додати до міфології власного персонажа.</li>
-        <li>Якщо вам не до душі такий спосіб, ваше право не любити, але не душніть на інших.</li>
-    </ol>
+          <ol>
+            <li>Кластери на Атласі відображають згруповання користувачів за певною ознакою – так, наприклад, на Атласі вже є український кластер, який ми плекаємо.
+            <li>Жовті кульки – це українські користувачі на Атласі, їхній розмір може змінюватися залежно
+              від активності. Наші жовті кульки ми теж плекаємо.</li>
+            <li>Кожен кластер має свій колір, проте трапляються схожі. Так, жовтий колір також належить кластеру Web3, але жовтий українського кластеру насиченіший і яскравіший, а жовтий Web3 – тьмяніший. Побачити різницю можна
+              <a href="https://bsky.jazco.dev/">на Атласі</a></li>
+            <li>Якщо вас немає на Атласі, чекайте оновлення.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
 
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Що таке Укртвізалізниця?
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Це об'єднання зусиль команди людей, українців, щоб перевезти сюди з твітера якомога більше людей. Заснована
+            <a href="https://bsky.app/profile/mathan.dev">@mathan.dev</a>.</p>
+        </div>
+      </div>
+    </div>
 
-<li>Що за Ющенко-треди?
-    <p>Це ланцюжок відповідей різних користувачів з однієї букви, які разом складаються у "Ющенко так!".</p></li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Що таке церква?
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Церква – це наша спроба у розважальний спосіб описати принципи того, як працює Блакитне з нашого досвіду.
+            Детальніше можна почитати у <a href="https://bsky.app/profile/bsky.church">@bsky.church</a>.
+            Також у церкви <a href="https://bsky.app/profile/did:plc:dvgliotey33vix3wlltybgkd/feed/bluebook">є свій фід</a>,
+            і <a href="https://bsky.church/">свій сайт</a></p>
 
-<li>Що за пісня про їжачка?
-    <p>Це <a href="https://www.youtube.com/watch?v=VOWmoANve8s">пісня гурту Фліт</a>.</p></li>
+          <ol>
+            <li>Свиня, лисиця, змія та інший зоопарк&nbsp;&mdash;це розважальний спосіб, а українці,
+              очевидно, дуже люблять тварин :) Тому вони стали персонажами міфології церкви і приносять інвайти.
+              Ви можете додати до міфології власного персонажа.</li>
+            <li>Якщо вам не до душі такий спосіб, ваше право не любити, але не душніть на інших.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
 
-<li>Якщо в Твітері твіти, то що тут?
-    <p>Офіційно, пости і репости. Вестерни винайшли скіти і рескіти (skeets&reskeets,
-        від sky+tweet), втім, це, здається не дуже до душі команді Блакитного.</p>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSix">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Що за Ющенко-треди?
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Це ланцюжок відповідей різних користувачів з однієї букви, які разом складаються у "Ющенко так!".</p>
+        </div>
+      </div>
+    </div>
 
-<li>Яка максимальна кількість символів у одному пості?
-    <p>300 символів.</p></li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSeven">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          Що за пісня про їжачка?
+        </button>
+      </h2>
+      <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Це <a href="https://www.youtube.com/watch?v=VOWmoANve8s">пісня гурту Фліт</a>.</p>
+        </div>
+      </div>
+    </div>
 
-    <li>Чи можу я запостити відео або гіф?
-        <p>Ні, тільки фото, текст або посилання на те, що вам потрібно.</p></li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingEight">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+          Якщо в Твітері твіти, то що тут?
+        </button>
+      </h2>
+      <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Офіційно, пости і репости. Вестерни винайшли скіти і рескіти (skeets&reskeets,
+            від sky+tweet), втім, це, здається не дуже до душі команді Блакитного.</p>
+        </div>
+      </div>
+    </div>
 
-<li>Я не бачу відвертого контенту/Я виклав/ла НСФВ, але не бачу в стрічці.
-<p>Перейдіть у Moderation - Content filtering і налаштуйте відображення відвертого контенту
-    (краще – всіх пунктів, але дійте за власними бажаннями) з режиму Hide на Warn/Show.</p>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingNine">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+          Яка максимальна кількість символів у одному пості?
+        </button>
+      </h2>
+      <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>300 символів.</p>
+        </div>
+      </div>
+    </div>
 
-    <ol>
-        <li>Якщо у вас айфон, є ймовірність, що ви не зможете змінити налаштування через вимоги App Store до
-            усіх застосунків, що у них розміщуються. Залогіньтеся у веб версію і налаштуйте це там.</li>
-    </ol>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTen">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+          Чи можу я запостити відео або гіф?
+        </button>
+      </h2>
+      <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Ні, тільки фото, текст або посилання на те, що вам потрібно.</p>
+        </div>
+      </div>
+    </div>
 
-    <li>Чи можу я закріпити пост?
-    <p>Ні.</p></li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingEleven">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+          Я не бачу відвертого контенту/Я виклав/ла НСФВ, але не бачу в стрічці.
+        </button>
+      </h2>
+      <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Перейдіть у Moderation - Content filtering і налаштуйте відображення відвертого контенту
+            (краще – всіх пунктів, але дійте за власними бажаннями) з режиму Hide на Warn/Show.</p>
 
-    <li>Чи є тут закладки?
-        <p>Ні (хіба що Ющенко-тредів).</p>
-    </li>
+          <ol>
+            <li>Якщо у вас айфон, є ймовірність, що ви не зможете змінити налаштування через вимоги App Store до
+              усіх застосунків, що у них розміщуються. Залогіньтеся у веб версію і налаштуйте це там.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
 
-    <li>В стрічці постійно чужі відповіді, я не хочу їх бачити.
-        <p>Перейдіть в Settings - Home Feed Preferences і налаштуйте, як ви хочете бачити.</p>
-    </li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwelve">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+          Чи можу я закріпити пост?
+        </button>
+      </h2>
+      <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Ні.</p>
+        </div>
+      </div>
+    </div>
 
-    <li>Тут не працюють гештеги?
-        <p>Вони не працюють в звичному розумінні, проте завдяки гештегам зручно створювати
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThirteen">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+          Чи є тут закладки?
+        </button>
+      </h2>
+      <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Ні (хіба що Ющенко-тредів).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFourteen">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+          В стрічці постійно чужі відповіді, я не хочу їх бачити.
+        </button>
+      </h2>
+      <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Перейдіть в Settings - Home Feed Preferences і налаштуйте, як ви хочете бачити.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFifteen">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+          Тут не працюють гештеги?
+        </button>
+      </h2>
+      <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Вони не працюють в звичному розумінні, проте завдяки гештегам зручно створювати
             власні фіди.</p>
-    </li>
+        </div>
+      </div>
+    </div>
 
-    <li>Мені не приходять сповіщення, що робити?
-        <p>Нічого, насолоджуватися. Сповіщення не приходять майже ні в кого.</p>
-    </li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSixteen">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+          Мені не приходять сповіщення, що робити?
+        </button>
+      </h2>
+      <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Нічого, насолоджуватися. Сповіщення не приходять майже ні в кого.</p>
+        </div>
+      </div>
+    </div>
 
-    <li>Чи є тут особисті повідомлення?
-        <p>Ні, нема. Всі свої, не соромтесь!</p>
-    </li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSeventeen">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+          Чи є тут особисті повідомлення?
+        </button>
+      </h2>
+      <div id="collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="headingSeventeen" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Ні, нема. Всі свої, не соромтесь!</p>
+        </div>
+      </div>
+    </div>
 
-    <li>Чи можу я написати тред?
-    <p>Створити ланцюжок і запостити його весь одним кліком – ні. Можна писати відповіді
-        на вже існуючі пости.<p/>
-    <ol>
-        <li>Нові відповіді в ланцюжку не підіймають тред вище.</li>
-    </ol>
-    </li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingEighteen">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+          Чи можу я написати тред?
+        </button>
+      </h2>
+      <div id="collapseEighteen" class="accordion-collapse collapse" aria-labelledby="headingEighteen" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Створити ланцюжок і запостити його весь одним кліком – ні. Можна писати відповіді
+            на вже існуючі пости.</p>
 
-    <li>Чи можу я подивитись, хто квотнув пост?
-        <p>Якщо це ваш пост, то вам прийде повідомлення. Якщо пост не ваш, то ні, немає можливості побачити всі
+          <ol>
+            <li>Нові відповіді в ланцюжку не підіймають тред вище.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingNineteen">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNineteen" aria-expanded="false" aria-controls="collapseNineteen">
+          Чи можу я подивитись, хто квотнув пост?
+        </button>
+      </h2>
+      <div id="collapseNineteen" class="accordion-collapse collapse" aria-labelledby="headingNineteen" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Якщо це ваш пост, то вам прийде повідомлення. Якщо пост не ваш, то ні, немає можливості побачити всі
             квоти конкретного поста.</p>
-        <ol>
+          <ol>
             <li>Квот-репости не враховуються у загальну кількість репостів.</li>
-        </ol>
-    </li>
+          </ol>
+        </div>
+      </div>
+    </div>
 
-    <li>Як часто з'являються інвайти?
-        <p>Раз на 10 днів (2 тижні?) вам точно буде приходити принаймні 1 інвайт.</p>
-    </li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwenty">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+          Як часто з'являються інвайти?
+        </button>
+      </h2>
+      <div id="collapseTwenty" class="accordion-collapse collapse" aria-labelledby="headingTwenty" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Раз на 10 днів (2 тижні?) вам точно буде приходити принаймні 1 інвайт.</p>
+        </div>
+      </div>
+    </div>
 
-    <li>Я маю бути активним/ою, щоб отримати інвайт?
-        <p>Щоб отримати 1 інвайт раз на 10 днів – ні. Він випаде і якщо не бути активними.</p>
-    <ol>
-        <li>Можливо, за активність можна отримати більше, але на це впливає багато інших
-            параметрів, тож це не гарантія.</li>
-        <li>Втім, прояви активності заохочуються, оскільки це впливає на зростання кластеру,
-            видимість українців, щоб нас чули, прислухалися до нас (навіть якщо ви лише шітпостите про своє).
-        </li>
-    </ol>
-        </li>
-    <li>Я запросив/ла друзів за своїми інвайтами і коли вони доєдналися, то мені прийшло
-        повідомлення з кнопкою Dismiss, що це означає?
-    <p>Це означає, що ви можете приховати повідомлення. Це ніяк не вплине на перебування
-        ваших друзів у Блакитному.</p>
-    </li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwentyOne">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyOne" aria-expanded="false" aria-controls="collapseTwentyOne">
+          Я маю бути активним/ою, щоб отримати інвайт?
+        </button>
+      </h2>
+      <div id="collapseTwentyOne" class="accordion-collapse collapse" aria-labelledby="headingTwentyOne" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Щоб отримати 1 інвайт раз на 10 днів – ні. Він випаде і якщо не бути активними.</p>
+          <ol>
+            <li>Можливо, за активність можна отримати більше, але на це впливає багато інших
+              параметрів, тож це не гарантія.</li>
+            <li>Втім, прояви активності заохочуються, оскільки це впливає на зростання кластеру,
+              видимість українців, щоб нас чули, прислухалися до нас (навіть якщо ви лише шітпостите про своє).
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
 
-    <li>Де можна подивитись усі профілі, які я забанив/ла чи зам'ютив/ла?
-        <p>Moderation - Blocked accounts або Muted accounts відповідно.</p>
-    </li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwentyTwo">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyTwo" aria-expanded="false" aria-controls="collapseTwentyTwo">
+          Я запросив/ла друзів за своїми інвайтами і коли вони доєдналися, то мені прийшло
+          повідомлення з кнопкою Dismiss, що це означає?
+        </button>
+      </h2>
+      <div id="collapseTwentyTwo" class="accordion-collapse collapse" aria-labelledby="headingTwentyTwo" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Це означає, що ви можете приховати повідомлення. Це ніяк не вплине на перебування
+            ваших друзів у Блакитному.</p>
+        </div>
+      </div>
+    </div>
 
-    <li>Чи можна поставити темну тему застосунку?
-        <p>Так, у Settings - Appearance.</p>
-    </li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwentyThree">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyThree" aria-expanded="false" aria-controls="collapseTwentyThree">
+          Де можна подивитись усі профілі, які я забанив/ла чи зам'ютив/ла?
+        </button>
+      </h2>
+      <div id="collapseTwentyThree" class="accordion-collapse collapse" aria-labelledby="headingTwentyThree" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Moderation - Blocked accounts або Muted accounts відповідно.</p>
+        </div>
+      </div>
+    </div>
 
-    <li>Що таке App Passwords (Settings)?
-        <p>Це дуже офігезна штука, яка дозволяє вам користуватися сторонніми сервісами для
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwentyFour">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyFour" aria-expanded="false" aria-controls="collapseTwentyFour">
+          Чи можна поставити темну тему застосунку?
+        </button>
+      </h2>
+      <div id="collapseTwentyFour" class="accordion-collapse collapse" aria-labelledby="headingTwentyFour" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Так, у Settings - Appearance.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwentyFive">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyFive" aria-expanded="false" aria-controls="collapseTwentyFive">
+          Що таке App Passwords (Settings)?
+        </button>
+      </h2>
+      <div id="collapseTwentyFive" class="accordion-collapse collapse" aria-labelledby="headingTwentyFive" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Це дуже офігезна штука, яка дозволяє вам користуватися сторонніми сервісами для
             Блакитного (як-от зібрати коло, подивитись найуживаніші вами слова, etc.), не
             надаючи власний пароль. Тут можна згенерувати тимчасовий пароль і використати його для
             подібних сервісів, а пізніше видалити згенерований пароль.</p>
-    </li>
-    <li>Що таке Content languages?
-        <p>Тут можна налаштувати те, якими мовами ви хочете бачити контент. Для того, щоб
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwentySix">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentySix" aria-expanded="false" aria-controls="collapseTwentySix">
+          Що таке Content languages?
+        </button>
+      </h2>
+      <div id="collapseTwentySix" class="accordion-collapse collapse" aria-labelledby="headingTwentySix" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Тут можна налаштувати те, якими мовами ви хочете бачити контент. Для того, щоб
             допомогти іншим бачити контент бажаною мовою, не забувайте перед відправкою
             поста вказати мову, яким його написано (знизу праворуч поряд з кількістю написаних
             символів).</p>
-    </li>
+        </div>
+      </div>
+    </div>
 
-    <li>Чи можу я змінити свій @?
-        <p>Так, у Settings - Change handle (треба трохи прокрутити вниз).</p>
-    </li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwentySeven">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentySeven" aria-expanded="false" aria-controls="collapseTwentySeven">
+          Чи можу я змінити свій @?
+        </button>
+      </h2>
+      <div id="collapseTwentySeven" class="accordion-collapse collapse" aria-labelledby="headingTwentySeven" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Так, у Settings - Change handle (треба трохи прокрутити вниз).</p>
+        </div>
+      </div>
+    </div>
 
-    <li>Чи можна перекласти пост?
-        <p>Так, натисніть три крапки біля поста иа оберіть Translate – але зауважте, вас перекине
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwentyEight">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyEight" aria-expanded="false" aria-controls="collapseTwentyEight">
+          Чи можна перекласти пост?
+        </button>
+      </h2>
+      <div id="collapseTwentyEight" class="accordion-collapse collapse" aria-labelledby="headingTwentyEight" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Так, натисніть три крапки біля поста иа оберіть Translate – але зауважте, вас перекине
             на вкладку браузера з відкритим Гугл транслейтом (і вже вставленим текстом).</p>
-    </li>
+        </div>
+      </div>
+    </div>
 
-    <li>Чи можна скопіювати текст поста?
-        <p>Так, три крапки біля поста - copy post text.</p>
-    </li>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwentyNine">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyNine" aria-expanded="false" aria-controls="collapseTwentyNine">
+          Чи можна скопіювати текст поста?
+        </button>
+      </h2>
+      <div id="collapseTwentyNine" class="accordion-collapse collapse" aria-labelledby="headingTwentyNine" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Так, три крапки біля поста - copy post text.</p>
+        </div>
+      </div>
+    </div>
 
-    <li>Чи можна зарепортити пост/аккаунт?
-        <p>Так, три кнопки біля поста - report; щоб зарепортити аккаунт, перейдіть на нього і знайдіть
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThirty">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirty" aria-expanded="false" aria-controls="collapseThirty">
+          Чи можна зарепортити пост/аккаунт?
+        </button>
+      </h2>
+      <div id="collapseThirty" class="accordion-collapse collapse" aria-labelledby="headingThirty" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Так, три кнопки біля поста - report; щоб зарепортити аккаунт, перейдіть на нього і знайдіть
             три кнопки справа від аватарки.</p>
-    </li>
+        </div>
+      </div>
+    </div>
 
-    <li>Де побачити свої лайки?
-        <p>Окремого функціоналу для цього не підвезли, проте один з користувачів Блакитного створив
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThirtyOne">
+        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirtyOne" aria-expanded="false" aria-controls="collapseThirtyOne">
+          Де побачити свої лайки?
+        </button>
+      </h2>
+      <div id="collapseThirtyOne" class="accordion-collapse collapse" aria-labelledby="headingThirtyOne" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          <p>Окремого функціоналу для цього не підвезли, проте один з користувачів Блакитного створив
             для цього <a href="https://bsky.app/profile/did:plc:vc7f4oafdgxsihk4cry2xpze/feed/likes">фід</a>
-        </p>
-    </li>
-</ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
